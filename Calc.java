@@ -13,22 +13,11 @@ System.out.println("두번째 숫자 입력");
 int num2 = scanner.nextInt();
 int result = 0;
 
-    if (opcode.equals("+")) {
-        result = num1 + num2;
-}else if (opcode.equals("-")) {
-    result = num1 - num2;
-}else if (opcode.equals("*")) {
-    result = num1 * num2;
-}else if (opcode.equals("/")) {
-    if (num2 != 0) {
-        result = num1 / num2;
-    } else {
-        System.out.println("0으로 나눌 수 없습니다");
-        scanner.close();
-        return;
-    }
+if(opcode.equals("+")){result = num1 + num2;}
+else if(opcode.equals("-")){result = num1 - num2;}
+else if(opcode.equals("*")){result = num1 * num2;}
+else if(opcode.equals("/")){result = num1 / num2;}
+else {System.out.println("연산자 오류");}
+System.out.println(result);
 }
-
- System.out.println("결과 :" + result);
- }
 }
